@@ -1,0 +1,64 @@
+.title {
+	text-align: center;
+	position: relative;
+	bottom: 30px;
+	color: #074C6F;
+}
+
+.buttonGroup {
+	padding: 10px;
+	text-align: center;
+}
+
+.inputFields {
+	margin-left: 50px;
+	font-size: 12px;
+	padding: 5px;
+}
+
+input[type=text] {
+	width: 200px;
+	border-radius: 5px;
+}
+
+select {
+	width: 250px;
+	border-radius: 5px;
+}
+
+input[type=email] {
+	width: 200px;
+	border-radius: 5px;
+}
+
+.lastNameCol {
+	display: inline-block;
+	position: absolute;
+	left: 400px;
+	top: 65px;
+}
+
+.address {
+	margin-top: 5px;
+}
+
+.button {
+	background-color: #074C6F;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.mainContainer {
+	align: center;
+	width: 50%;
+	position: absolute;
+	left: 350px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+s

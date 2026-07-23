@@ -1,0 +1,42 @@
+.titlebar {
+	background-color: black;
+}
+
+.titleImage {
+	width: 100%;
+	height: 150px;
+}
+
+input {
+	height: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+.menu {
+	background-color: #046594;
+}
+
+.menubutton {
+	background-color: #046594;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size F: 16px;
+}
+
+.menubutton:hover {
+	background-color: #74D1FE;
+	color: white;
+}
+
+.bodyImage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}

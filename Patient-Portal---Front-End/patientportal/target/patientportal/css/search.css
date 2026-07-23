@@ -1,0 +1,110 @@
+
+::placeholder {
+	color: rgb(102, 51, 0);
+}
+
+.title {
+	text-align: center;
+	color: #666666;
+	margin-top: -15px;
+}
+
+.nameBox {
+	margin-left: 450px;
+	font-size: 14px;
+	margin-top: -20px;
+} 
+.nameBox input {
+	margin-bottom: 10px; 
+	border-radius: 5px;
+	width: 200px;
+} 
+
+.idBox {
+	margin-left:700px;
+	font-size: 14px;
+	position: relative;
+	bottom :138.5px;
+}
+
+.idBox input {
+	margin-bottom: 10px; 
+	border-radius: 5px;
+	width: 200px;
+}
+
+.buttons {
+	margin-left: -50px;
+	position: relative;
+	bottom :138.5px;
+	
+}
+
+.search {
+	display: inline-block;
+	margin-left: 560px;
+	padding: 09px 18px;
+	font-size: 15px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #008080;
+	border: none;
+	border-radius: 15px;
+}
+
+.search:hover {
+	background-color: #66B2B2
+}
+
+.reset {
+	display: inline-block;
+	padding: 09px 18px;
+	font-size: 15px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #008080;
+	border: none;
+	border-radius: 15px;
+}
+
+.reset:hover {
+	background-color: #66B2B2
+}
+
+.cancel {
+	display: inline-block;
+	padding: 09px 18px;
+	font-size: 15px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #008080;
+	border: none;
+	border-radius: 15px;
+}
+
+.cancel:hover {
+	background-color: #66B2B2
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position:relative;
+    bottom:110px;
+}
+
+td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}

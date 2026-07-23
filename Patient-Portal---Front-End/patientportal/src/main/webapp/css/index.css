@@ -1,0 +1,65 @@
+.titlebar {
+	background-color: black;
+}
+
+.titleImage {
+	width: 100%;
+	height: 150px;
+}
+
+input {
+	height: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+.menu {
+	background-color: #046594;
+}
+
+.menubutton {
+	background-color: #046594;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size F: 16px;
+}
+
+.menubutton:hover {
+	background-color: #74D1FE;
+	color: white;
+}
+
+.bodyImage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+ .loginblock{
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: #046594;
+ 	opacity: 0.7;
+ 	top:0px;
+ 	position: absolute;
+ 	text-align: center;
+}
+.loginblock input{
+	margin:5px;
+	font-size:25px;
+	color:#000;
+	background-color:#fff;
+	border-radius:20px;
+	padding:5px;
+}
+.logininput{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}

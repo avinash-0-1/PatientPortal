@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "ISO-8859-1">
+<title>Register Patient</title>
+<script
+	src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js">
+</script>
+<script 
+	src = "js/registercontroller.js">
+</script>
+<script
+	src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<link 
+	rel = "stylesheet"
+	href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link 
+	href = "css/register.css" 
+	rel = "stylesheet" 
+	type = "text/css">
+<link 
+	rel = "stylesheet" 
+	href = "https://www.w3schools.com/w3css/4/w3.css">
+<link 
+	rel = "stylesheet" 
+	href = "css/index.css" 
+	type = "text/css">
+</head>
+
+<body data-ng-app = "patientPortal" data-ng-controller = "patientController">
+	<div class = "titlebar">
+		<img height = "50px" class = "titleImage" src = "image/title.JPG">
+	</div>
+	<form data-ng-submit = "addPatient()">
+		<div class = "mainContainer">
+			<div class = "title">
+				<h2 style = "padding: 5px">Register a Patient</h2>
+			</div>
+			<div class = "inputFields">
+				<div>
+					First Name:<br/>
+					<input
+						id = "firstName" 
+						class = "w3-input"
+						name = "firstName" 
+						type = "text"
+						pattern = "[a-zA-Z]+"
+						title = "enter characters only"
+						data-ng-model = "firstName" 
+						required /><br/>
+					Date of Birth:<br/>
+					<input 
+						class = "w3-input"
+						type = "date" 
+						name = "dateOfBirth" 
+						data-ng-model = "dateOfBirth"
+						style = "width:200px"
+						placeholder = "mm/dd/yy"
+						required /><br/>
+					Phone:<br /> 
+					<input 
+						id = "phoneNum"
+						class = "w3-input" 
+						name = "phone" 
+						id = "phoneNo" 
+						pattern = "[0-9]{10}"
+						type = "text" 
+						data-ng-model = "phoneNo"
+						placeholder = "eg-9122448866"
+						required /><br />
+				</div>
+				<div class="lastNameCol">
+					Last Name:<br/>
+					<input 
+						id = "lastName" 
+						class = "w3-input" 
+						name = "lastName"
+						type = "text" 
+						pattern = "[a-zA-Z]+"
+						title = "enter characters only"
+						data-ng-model = "lastName" 
+						required /><br /> 
+					Gender:<br />
+					<select 
+						id = "gender" 
+						name = "gender" 
+						class = "form-control"
+						style = "width: 200px"
+						data-ng-model = "gender">
+							<option value = "Female">Female</option>
+							<option value = "Male">Male</option>
+							<option value = "Transgender">Transgender</option>
+					</select><br />
+					Email-ID:<br /> 
+					<input 
+						id = "emailId" 
+						class = "w3-input"
+						name = "email" 
+						type = "email" 
+						data-ng-model = "emailId"
+						placeholder = "eg-xyz@abc.com" 
+						required /><br />
+				</div>
+				<div class = "address">
+					<br />
+					<br/>
+					<span
+						style = "font-family: Arial, Helvetica, sans-serif; font-size: 20px">Address</span><br />
+					Line:<br /> 
+					<input 
+						id = "addressLine" 
+						style = "width: 400px"
+						class = "w3-input" 
+						type = "text" 
+						name = "addressLine"
+						data-ng-model = "addressLine" /><br />
+					Street:<br /> 
+					<input
+						id = "addressStreet" 
+						style = "width: 400px" 
+						class = "w3-input"
+						type = "text"
+						name = "street" 
+						data-ng-model = "street" /><br /> 
+					City:<br /> 
+					<input
+						id = "addressCity" 
+						style = "width: 400px" 
+						class = "w3-input" 
+						type = "text"
+						name = "city" 
+						data-ng-model = "city" /><br /> 
+					State:<br /> 
+					<input
+						id = "addressState" 
+						style = "width: 400px" 
+						class = "w3-input" 
+						type = "text"
+						name = "state" 
+						data-ng-model = "state" /><br /> 
+					Country:<br /> 
+					<input
+						id = "addressCountry" 
+						style = "width: 400px" 
+						class = "w3-input" 
+						type = "text"
+						name = "country" 
+						data-ng-model = "country" /><br />
+				</div>
+				<div class = "buttonGroup">
+					<input 
+						id = "registerButton" 
+						class = "btn btn-primary" 
+						type = "submit"
+						value = "Register" 
+						style = "margin-top: 20px; margin-botton: 40px;" />
+					<input 
+						id = "clearButton" 
+						class = "btn btn-primary" 
+						type = "Reset"
+						value = "Clear"
+						style = "margin-top: 20px; margin-left: 20px; margin-botton: 40px;" />
+					<a href = "index.jsp">
+						<input 
+							id = "cancelButton"
+							class = "btn btn-primary" 
+							type = "button" 
+							value = "Cancel"
+							style = "margin-top: 20px; margin-left: 20px; margin-botton: 40px;" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

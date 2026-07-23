@@ -1,0 +1,80 @@
+
+::placeholder {
+	color: rgb(102, 51, 0);
+}
+.title {
+	text-align: center;
+	color: #666666;
+	margin-top: -15px;
+}
+
+.nameBox {
+	margin-left: 450px;
+	font-size: 14px;
+	margin-top: -20px;
+} 
+.nameBox input {
+	margin-bottom: 10px; 
+	border-radius: 5px;
+	width: 200px;
+} 
+
+.idBox {
+	margin-left:700px;
+	font-size: 14px;
+	position: relative;
+	bottom :138.5px;
+}
+
+.idBox input {
+	margin-bottom: 10px; 
+	border-radius: 5px;
+	width: 200px;
+}
+
+.buttons {
+	margin-left: 14px;
+	position: relative;
+	bottom: 115.5px;
+	padding: 10px;
+	text-align: center;
+	
+}
+
+.button{
+	background-color: #074C6F;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.button:hover {
+	background-color: #074C6F;
+}
+
+#patientTable{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position:relative;
+    bottom:110px;
+}
+
+#patientTable td, #patientTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#patientTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#patientTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #074C6F;
+    color: white;
+}

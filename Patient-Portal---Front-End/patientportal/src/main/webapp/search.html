@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Patient</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+<script
+	src = "https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.17.0/angular-translate.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/searchcontroller.js">
+</script>
+<script 
+	src="js/datemaxattribute.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/search.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body data-ng-app="searchApplication" data-ng-controller="searchController">
+	<div>
+		<img height="165px" width="100%" id="titleImage" style="padding: 5px"
+			src="image/title.JPG">
+	</div>
+	<form>
+		<div class="title">
+			<h2 style="padding-top: 15px">{{'title'|translate}}</h2>
+		</div>
+		<br>
+		<div class="nameBox">
+			{{'first_name'|translate}}: <input type="text" placeholder="{{'placeholder_firstName'|translate}}"
+				id="searchFirstName" class="w3-input" data-ng-model="firstName">
+			{{'patient_id'|translate}}: <input id="searchPatientId" type="number"
+				class="w3-input" placeholder="{{'placeholder_patientId'|translate}}" min="0"
+				data-ng-model="patientId">
+		</div>
+		<div class="idBox">
+			{{'last_name'|translate}}: <input id="searchLastName" type="text" class="w3-input"
+				placeholder="{{'placeholder_lastName'|translate}}" data-ng-model="lastName">
+			{{'date_of_birth'|translate}}: <input type="date" name="dateOfBirth"
+				id="dateOfBirth" class="w3-input" data-ng-model="dateOfBirth">
+		</div>
+		<div class="buttons">
+			<button id = "search" class="btn btn-primary" data-ng-click="search()">{{'search_button'|translate}}</button>
+			&nbsp;&nbsp;&nbsp; <input type="reset" id = "reset" class="btn btn-primary" value="{{'reset_button'|translate}}" data-ng-click = "resetFields()">&nbsp;&nbsp;&nbsp;
+			<a href="index.jsp"><input type="button" id = "cancel" class="btn btn-primary"
+				value="{{'cancel_button'|translate}}"></a>
+		</div>
+		<div>
+			<table id = "patientTable" class = "table" data-ng-if="patientList">
+				<tr>
+					<th>{{'patient_id'|translate}}</th>
+					<th>{{'first_name'|translate}}</th>
+					<th>{{'last_name'|translate}}</th>
+					<th>{{'date_of_birth'|translate}}</th>
+					<th>{{'gender'|translate}}</th>
+					<th>{{'phone_no'|translate}}</th>
+					<th>{{'email_id'|translate}}</th>
+					<th>{{'address_line'|translate}}</th>
+					<th>{{'address_street'|translate}}</th>
+					<th>{{'address_city'|translate}}</th>
+					<th>{{'address_state'|translate}}</th>
+					<th>{{'address_country'|translate}}</th>
+				</tr>
+				<tr data-ng-repeat="display in patientList">
+					<td>{{display.patientId}}</td>
+					<td>{{display.firstName}}</td>
+					<td>{{display.lastName}}</td>
+					<td>{{display.dateOfBirth}}</td>
+					<td>{{display.gender}}</td>
+					<td>{{display.phoneNo}}</td>
+					<td>{{display.emailId}}</td>
+					<td>{{display.addressLine}}</td>
+					<td>{{display.street}}</td>
+					<td>{{display.city}}</td>
+					<td>{{display.state}}</td>
+					<td>{{display.country}}</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>

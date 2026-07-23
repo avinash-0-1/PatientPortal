@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Patient</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src = "https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.17.0/angular-translate.js"></script>
+<script 
+	src="js/registercontroller.js"></script>
+<script 
+	src="js/datemaxattribute.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link 
+	href="css/register.css" rel="stylesheet" type="text/css">
+<link 
+	rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link 
+	rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+
+<body data-ng-app="registerApplication" data-ng-controller="registerController">
+	
+	<div class="titlebar">
+		<img height="50px" class="titleImage" src="image/title.JPG">
+	</div>
+	
+	<form name="registerForm" data-ng-submit="addPatient()">
+		<div class="mainContainer">
+			<div class="title">
+				<h2 style="padding: 5px">{{'title' | translate}}</h2>
+			</div>
+			<div class="mandatory" style="font-size: 11px">
+				*{{'mandatory' | translate}}
+			</div>
+			<br />
+			
+			<div class="inputFields">
+				<div>
+					{{'first_name'|translate}}:<span class="mandatory">*</span><br /> <input
+						id="firstName" class="w3-input" name="firstName" type="text"
+						pattern="[a-zA-Z]+" title="{{'name_title'|translate}}"
+						data-ng-model="firstName" required /><br /> 
+					{{'date_of_birth' | translate}}:<span
+						class="mandatory">*</span><br /> <input id="dateOfBirth"
+						class="w3-input" type="date" name="dateOfBirth"
+						data-ng-model="dateOfBirth" style="width: 200px"
+						placeholder="mm/dd/yy" required /><br /> 
+					{{'phone' | translate}}:<span
+						class="mandatory">*</span><br /> <input id="phoneNum"
+						class="w3-input" name="phone" id="phoneNo" pattern="[0-9]{10}"
+						type="text" data-ng-model="phoneNo" placeholder="{{'placeholder_phone'|translate}}"
+						required /><br />
+				</div>
+				
+				<div class="lastNameCol">
+					{{'last_name' | translate}}:<span class="mandatory">*</span><br /> <input
+						id="lastName" class="w3-input" name="lastName" type="text"
+						pattern="[a-zA-Z]+" title="{{'name_title'|translate}}"
+						data-ng-model="lastName" required /><br /> 
+					{{'gender'|translate}}:<span
+						class="mandatory">*</span><br /> <select id="gender"
+						name="gender" class="form-control" style="width: 200px"
+						data-ng-model="gender">
+						<option value="Female">{{'female'|translate}}</option>
+						<option value="Male">{{'male'|translate}}</option>
+						<option value="Transgender">{{'transgender'|translate}}</option>
+						</select><br /> 
+					{{'email_id'|translate}}:<br /> <input id="emailId" class="w3-input"
+						name="email" type="email" data-ng-model="emailId"
+						placeholder="{{'placeholder_email'|translate}}" required /><br />
+				</div>
+				<div class="address">
+					<br /> <br /> <span
+						style="font-family: Arial, Helvetica, sans-serif; font-size: 20px">{{'address'|translate}}</span><br />
+					{{'address_line'|translate}}:<br /> 
+					<input id="addressLine" style="width: 400px"
+						class="w3-input" type="text" name="addressLine"
+						data-ng-model="addressLine" /><br /> 
+					{{'address_street'|translate}}:<br /> 
+					<input
+						id="addressStreet" style="width: 400px" class="w3-input"
+						type="text" name="street" data-ng-model="street" /><br /> 
+					{{'address_city'|translate}}:<br />
+					<input id="addressCity" style="width: 400px" class="w3-input"
+						type="text" name="city" data-ng-model="city" /><br /> 
+					{{'address_state'|translate}}:<br />
+					<input id="addressState" style="width: 400px" class="w3-input"
+						type="text" name="state" data-ng-model="state" /><br /> 
+					{{'address_country'|translate}}:<br />
+					<input id="addressCountry" style="width: 400px" class="w3-input"
+						type="text" name="country" data-ng-model="country" /><br />
+				</div>
+				
+				<div class="buttonGroup">
+					<input id="registerButton" class="btn btn-primary" type="submit"
+						value= "{{'register_button'|translate}}" style="margin-top: 20px; margin-botton: 40px;" />
+					<input id="clearButton" class="btn btn-primary" type="Reset"
+						value="{{'clear_button'|translate}}"
+						style="margin-top: 20px; margin-left: 20px; margin-botton: 40px;" />
+					<a href="index.jsp"> <input id="cancelButton"
+						class="btn btn-primary" type="button" value="{{'cancel_button'|translate}}"
+						style="margin-top: 20px; margin-left: 20px; margin-botton: 40px;" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

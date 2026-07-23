@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html data-ng-app="searchApplication">
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+<script src="js/searchscript.js">
+	
+</script>
+<link href="css/search.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="ISO-8859-1">
+<title>Search Patient</title>
+</head>
+<body data-ng-controller="control">
+	<div>
+		<img height="165px" width="100%" id="titleImage" style="padding: 5px"
+			src="image/title.JPG">
+	</div>
+	<form>
+		<div class="title">
+			<h2 style="padding-top: -6px">Search a Patient</h2>
+		</div>
+		<br>
+		<div class="nameBox">
+			First Name: <input type="text" placeholder=" Enter First Name"
+				class="w3-input" data-ng-model="firstName"> 
+			Last Name: <input
+				type="text" class="w3-input" placeholder=" Enter Last Name"
+				data-ng-model="lastName">
+		</div>
+		<div class="idBox">
+			Last Name: <input type="text" class="w3-input"
+				placeholder=" Enter Last Name" data-ng-model="lastName">
+			Date Of Birth: <input type="date" placeholder=" Enter Patient Dob"
+				class="w3-input"
+				data-ng-bind="formatDate(date) |  date:'MM/dd/yyyy'"
+				data-ng-model="dateOfBirth">
+		</div>
+		<div class="buttons">
+			<button class="search" data-ng-click="search()">Search</button>
+			&nbsp;&nbsp;&nbsp; <input type="reset" class="reset" value="Reset">&nbsp;&nbsp;&nbsp;
+			<a href="index.jsp"><input type="button" class="cancel"
+				value="Cancel"></a>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<th>Patient Id</th>
+					<th>First-Name</th>
+					<th>Last-Name</th>
+					<th>Date-Of-Birth</th>
+					<th>Gender</th>
+					<th>Phone-No</th>
+					<th>Email</th>
+					<th>Address-Line</th>
+					<th>street</th>
+					<th>city</th>
+					<th>state</th>
+					<th>country</th>
+				</tr>
+				<tr data-ng-repeat="display in patientList">
+					<td>{{display.PatientId}}</td>
+					<td>{{display.FirstName}}</td>
+					<td>{{display.LastName}}</td>
+					<td>{{display.DateOfBirth}}</td>
+					<td>{{display.Gender}}</td>
+					<td>{{display.MobileNo}}</td>
+					<td>{{display.EmailId}}</td>
+					<td>{{display.AddressLine}}</td>
+					<td>{{display.Street}}</td>
+					<td>{{display.City}}</td>
+					<td>{{display.State}}</td>
+					<td>{{display.Country}}</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</body>
+</html>
