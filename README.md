@@ -80,15 +80,6 @@ MySQL
 | Jersey | Frontend proxy controller |
 | Java `HttpURLConnection` | Forwarding requests to backend |
 
-### Not Used
-
-This project does **not** use:
-
-- Spring Boot
-- Hibernate
-- JPA
-- ORM-based database mapping
-
 Database operations are implemented directly using SQL and JDBC.
 
 ## 🏗️ Project Architecture
@@ -466,32 +457,6 @@ Before using this project outside a local/demo environment:
 5. Add authentication and authorization if the application is deployed for real users.
 
 The inspected codebase does **not** contain a login or authentication flow.
-
-## ⚠️ Known Limitations
-
-### No Authentication
-
-The current implementation has no login or authentication mechanism.
-
-### No Database Migration
-
-The repository does not provide schema creation or migration scripts.
-
-### Separate Patient and Address Inserts
-
-Patient and address inserts are performed as separate database operations rather than one transaction.
-
-The patient ID is obtained using a `MAX(PatientId)` query, which can create incorrect patient/address associations when multiple registrations happen concurrently.
-
-For production use, this should be replaced with a safer generated-key/transaction-based approach.
-
-### No Active FHIR Integration
-
-The code contains placeholder FHIR-related endpoints, but they currently return empty strings and do not perform actual external FHIR calls.
-
-### CDN Dependencies
-
-Some frontend libraries are loaded from external CDNs rather than Maven dependencies.
 
 ## 🧪 Testing
 
